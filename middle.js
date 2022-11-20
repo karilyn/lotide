@@ -42,7 +42,7 @@ const assertArraysEqual = function(array1, array2) {
   }
   console.log(`✅Assertion Passed: ${array1} === ${array2}`);
 }
-
+// The middle function should return an array with only the middle element(s) of the provided array.
 const middle = function(array) {
   let a = [];
   let startIndex;
