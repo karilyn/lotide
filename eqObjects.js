@@ -52,18 +52,18 @@ const eqArrays = function(array1, array2) {
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1"};
-// assertEqual(eqObjects(ab, ba), true)
-console.log(eqObjects(ab, ba)); // true because order isn't important
+assertEqual(eqObjects(ab, ba), true)
+// console.log(eqObjects(ab, ba)); // true because order isn't important
 
 const abc = { a: "1", b: "2", c: "3" };
-//assertEqual(eqObjects(ab, abc), false);
-console.log(eqObjects(ab, abc));
+assertEqual(eqObjects(ab, abc), false);
+// console.log(eqObjects(ab, abc));
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-// assertEqual(eqObjects(cd, dc), true); // => true
-console.log(eqObjects(cd, dc));
+assertEqual(eqObjects(cd, dc), true); // => true
+// console.log(eqObjects(cd, dc));
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-// assertEqual(eqObjects(cd, cd2), false); // => false
-console.log(eqObjects(cd, cd2));
+assertEqual(eqObjects(cd, cd2), false); // => false
+// console.log(eqObjects(cd, cd2));
