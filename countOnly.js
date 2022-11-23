@@ -1,3 +1,4 @@
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅Assertion Passed: ${actual} === ${expected}`);
@@ -5,6 +6,7 @@ const assertEqual = function(actual, expected) {
     console.log(`❌Assertion Failed ${actual} !== ${expected}`);
   }
 };
+
 // This function should take in a collection of items and return counts for a specific subset of those items. It won't count everything. In order to decide what to count, it will also be given an idea of which items we care about and it will only count those, ignoring the others.
 // items will be strings
 // countOnly will be given an array and an object.
