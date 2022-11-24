@@ -9,21 +9,24 @@ const assertEqual = function(actual, expected) {
 function findKey(object, callback) {
   // scan the object and return the first key for which the callback returns truthy
   // return undefined if no key found
-  // it will return a string
-  const keyResult = Object.keys(object);
-  // look through every object key
-  for (let key of keyResult) {
-      if (callback(object[key])) {
+  // it will return a the key which is often a string
+
+  // for each object property
+  for (let key in object) {
+    // return the first key for which the callback function returns true.
+    // pass each value to the callback function
+    //   return the first key for which the callback function returns true
+    if (callback(object[key])) {
       return key;
     }
   }
-  return key;
+  return null;
 };
 
 
 
 
-findKey({
+let result = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
@@ -31,3 +34,7 @@ findKey({
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2) // => "noma"
+
+console.log(result);
+
+assertEqual(result, "noma");
