@@ -44,7 +44,7 @@ const takeUntil = function(array, callback) {
   let newArray = [];
   // iterate though each index in the array
   for (let i = 0; i < array.length; i++) {
-    // look for the index where the callback function hits the stopping point
+    // call callback for each item in the array, if it returns true, stop.
     if (callback(array[i])) {
       // if this condition is met, the return stops the function
       break;
