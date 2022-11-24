@@ -10,12 +10,14 @@ function findKey(object, callback) {
   // scan the object and return the first key for which the callback returns truthy
   // return undefined if no key found
   // it will return a string
-  const keyResult = Object.keys(objectToSearch);
-  for (const key of keyResult) {
-    if (callback(object.key) === key) {
+  const keyResult = Object.keys(object);
+  // look through every object key
+  for (let key of keyResult) {
+      if (callback(object[key])) {
       return key;
     }
-  } return key
+  }
+  return key;
 };
 
 
