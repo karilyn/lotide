@@ -1,3 +1,11 @@
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`❌Assertion Failed ${actual} !== ${expected}`);
+  }
+};
+
 const assertObjectsEqual = function(actual, expected) {
   // use the util library's inspect function so that assertion messages don't pring out [object Object]
   const inspect = require('util').inspect;
@@ -21,10 +29,11 @@ const eqObjects = function(object1, object2) {
     // use eqArrays function if values are arrays
     if (Array.isArray(object1[key]) || Array.isArray(object2[key])) {
       return eqArrays(object1[key], object2[key]);
-    } else
+    } else {
       // if values are not arrays, compare as primitives
       if (object1[key] !== object2[key]) {
         return false
+      }
     }
   }
   return true;
@@ -55,18 +64,21 @@ const eqObjects = function(object1, object2) {
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1"};
-assertObjectsEqual(eqObjects(ab, ba), true)
+let result = eqObjects(ab, ba);
+assertObjectsEqual(ab, ba);
+assertEqual(result, true);
 // console.log(eqObjects(ab, ba)); // true because order isn't important
 
+
 const abc = { a: "1", b: "2", c: "3" };
-assertObjectsEqual(eqObjects(ab, abc), false);
+assertEqual(eqObjects(ab, abc), false);
 // console.log(eqObjects(ab, abc));
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-assertObjectsEqual(eqObjects(cd, dc), true); // => true
+assertEqual(eqObjects(cd, dc), true); // => true
 // console.log(eqObjects(cd, dc));
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-assertObjectsEqual(eqObjects(cd, cd2), false); // => false
+assertEqual(eqObjects(cd, cd2), false); // => false
 // console.log(eqObjects(cd, cd2));
