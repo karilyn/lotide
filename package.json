@@ -1,0 +1,32 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "Karilyn Kempton's lotide directory for LHL Web Flex ",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karilyn/lotide.git"
+  },
+  "keywords": [
+    "lotide",
+    "LHL",
+    "lighthouse",
+    "library"
+  ],
+  "author": "Karilyn Kempton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karilyn/lotide/issues"
+  },
+  "homepage": "https://github.com/karilyn/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
+  }
+}
