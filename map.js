@@ -40,7 +40,7 @@ const eqArrays = function(array1, array2) {
 }
 
 
-
+// return a new array based on the results of the callback function
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
