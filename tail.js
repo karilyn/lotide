@@ -1,7 +1,7 @@
 const assertEqual = require('./assertEqual');
 
 
-
+// The tail is meant to be every element except the head of the array.
 const tail = function(array) {
   if (array.length === 0 || array.length === 1) {
     return null; // if there are one or fewer in the array, there can be no tail
