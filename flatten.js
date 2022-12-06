@@ -48,7 +48,7 @@ const assertArraysEqual = function(array1, array2) {
 // [1, 2, [3, 4], 5, [6]]
 // [1, 2, 3, 4, 5, 6]
 
-
+// take in an array containing elements including nested arrays of elements, and return a "flattened" version of the array. 
 const flatten = function(array){
   let flattened = [];
   // loop through the outer array to check whether each element is an array or not.
