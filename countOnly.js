@@ -1,28 +1,14 @@
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌Assertion Failed ${actual} !== ${expected}`);
-  }
-};
-// return an object containing counts of everything that the input object listed
-
-// This function should take in a collection of items and return counts for a specific subset of those items. It won't count everything. In order to decide what to count, it will also be given an idea of which items we care about and it will only count those, ignoring the others.
-// items will be strings
-// countOnly will be given an array and an object.
-// countOnly will return an object containing counts of everything that the input object listed.
+// When given an array and an object, countOnly will return an object containing number of instances of everything that the input object listed.
 // only keys with a truthy value will be counted in the resulting object
-// The fuction should report back how many instances of each string were found in the allItems array of strings.
 const countOnly = function(allItems, itemsToCount) {
+  // results will be an object
   const results = {};
-
+  // look through each item in allItems)
   for (const item of allItems) {
-    // console.log(item);
-    // results[item] += 1;
-    // } else {
-    // results[item] = 1
+    // if the variable item exists in itemsToCount
     if (itemsToCount[item]) {
+      // if there is already a value in results[item], add one to its count
       if (results[item]) {
         results[item] += 1;
       } else {
@@ -35,24 +21,5 @@ const countOnly = function(allItems, itemsToCount) {
 
 }
 
+module.exports = countOnly;
 
-
-// Our function countOnly needs to return a proper report on all the strings found in the input array, and their respective counts. Therefore it will need to return an object that can represent the stats.
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
