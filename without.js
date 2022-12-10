@@ -6,6 +6,6 @@ let without = function(source, itemsToRemove) {
   });
 
   return newArray;
-}9
+};
 
 module.exports = without;
