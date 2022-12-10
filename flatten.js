@@ -1,8 +1,5 @@
-
 // function will take in array containing elements including nested arrays
 // and return a "flattened" version of the array.
-
-
 const flatten = function(array) {
   let flattened = [];
   // loop through the outer array to check whether each element is an array or not.
