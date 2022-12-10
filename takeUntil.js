@@ -14,7 +14,7 @@ const takeUntil = function(array, callback) {
     newArray.push(array[i]);
   }
   return newArray;
-};
+}
 
 
 module.exports = takeUntil;
