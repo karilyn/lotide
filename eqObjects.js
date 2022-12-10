@@ -1,4 +1,4 @@
-const eqArrays = require('../eqArrays');
+const eqArrays = require('./eqArrays');
 
 const eqObjects = function(object1, object2) {
   // extract the keys from each object
