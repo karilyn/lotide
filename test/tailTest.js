@@ -1,8 +1,6 @@
 const assert = require('chai').assert;
 const tail = require('../tail');
 
-
-
 describe("#tail", () => {
   it("returns null for []", () => {
     assert.deepEqual(tail([]), null);
