@@ -1,6 +1,4 @@
-// map function will take in an aray to map and a callback function
-
-// return a new array based on the results of the callback function
+// given an array and a callback, map return a new array
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
