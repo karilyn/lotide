@@ -1,6 +1,3 @@
-const assertEqual = require('./assertEqual');
-
-
 // The tail is meant to be every element except the head of the array.
 const tail = function(array) {
   if (array.length === 0 || array.length === 1) {
